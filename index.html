@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Stationery & Art Supplies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">CreativeStationery</div>
+    <nav id="navMenu">
+        <a href="signin.html">Sign In</a>
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <span class="cart-icon" onclick="openCart()" title="Cart">🛒</span>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+
+<section class="hero">
+    <h1>Inkspire</h1>
+    <p>Premium Stationery & Art Supplies</p>
+</section>
+
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <h3>
+        Creative Stationery & Art Supplies provides premium stationery and art materials for students, artists, and professionals.
+        We focus on quality, affordability, and creativity, offering a wide range of notebooks, writing tools, art supplies, and office stationery. 
+        Our mission is to inspire creativity and productivity through reliable and well-designed products.
+    </h3>
+</section>
+
+<section id="products" class="products">
+  <h2>Our Products</h2>
+
+  <div class="product-grid">
+
+    <a href="notebooks.html" class="category-card">
+      <img src="images/notebook_home.jpg" alt="Notebooks">
+      <h3>Notebooks</h3>
+    </a>
+
+    <a href="pens.html" class="category-card">
+      <img src="images/pens_home.jpg" alt="Pens & Markers">
+      <h3>Pens & Markers</h3>
+    </a>
+
+    <a href="paints.html" class="category-card">
+      <img src="images/paints_home.jpg" alt="Paints & Brushes">
+      <h3>Paints & Brushes</h3>
+    </a>
+
+    <a href="crafts.html" class="category-card">
+      <img src="images/crafts_home.jpg" alt="Craft Supplies">
+      <h3>Craft Supplies</h3>
+    </a>
+
+    <a href="office.html" class="category-card">
+      <img src="images/office_home.jpg" alt="Office Stationery">
+      <h3>Office Stationery</h3>
+    </a>
+
+  </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 CreativeStationery</p>
+    <p>Address: 1st Stage, Kumarswamy Layout, Bengaluru</p>
+    <p>Contact: +91 9123456780</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

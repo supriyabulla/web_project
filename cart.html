@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Cart</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>🛒 Your Shopping Cart</h1>
+</header>
+
+<section class="cart-container">
+
+  <div class="cart-card">
+    <h2>Order Summary</h2>
+
+    <div id="cart-items" class="cart-items"></div>
+
+    <div class="cart-total">
+      <span>Total Amount</span>
+      <span>₹<span id="total">0</span></span>
+    </div>
+
+    <button class="confirm-btn" onclick="confirmOrder()">
+      Confirm Order
+    </button>
+  </div>
+
+</section>
+
+</body>
+</html>
