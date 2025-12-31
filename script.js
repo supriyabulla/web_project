@@ -1,17 +1,43 @@
+function handleContactForm() {
+  // Get values
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+  const message = document.getElementById("message").value.trim();
+  // Validation
+  if (name === "" || email === "" || message === ""|| phone === "" ) {
+    alert("Please fill all fields");
+    return false;
+  }
+  if (!/^[6-9]\d{9}$/.test(phone)) {
+    alert("Enter a valid 10-digit phone number");
+    return false;
+  }
 
-function validateForm() {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+  // Create content for document
+  const content =
+    `Name: ${name}\n` +
+    `Email: ${email}\n` +
+    `Message: ${message}\n` +
+    `phNo: ${phone}\n` +
+    `------------------------\n`;
 
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill all fields");
-        return false;
-    }
+  // Create a text file
+  const blob = new Blob([content], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
 
-    alert("Message sent successfully!");
-    return true;
+  // Auto-download file
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "contact_messages.txt";
+  a.click();
+
+  URL.revokeObjectURL(url);
+
+  alert("Message saved successfully!");
+  return false; // prevent page refresh
 }
+
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 

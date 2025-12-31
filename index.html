@@ -69,13 +69,14 @@
 
 <section id="contact" class="contact">
     <h2>Contact Us</h2>
+    <form onsubmit="return handleContactForm()">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="tel" id="phone" placeholder="Phone Number">
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+</form>
 
-    <form onsubmit="return validateForm()">
-        <input type="text" id="name" placeholder="Your Name">
-        <input type="email" id="email" placeholder="Your Email">
-        <textarea id="message" placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-    </form>
 </section>
 
 <footer>
