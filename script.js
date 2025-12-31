@@ -35,22 +35,7 @@ function handleContactForm() {
   URL.revokeObjectURL(url);
 
   alert("Message saved successfully!");
-   // Clear form after submit
-  document.getElementById("contactForm").reset();
-
-  // Show thank you message
-  document.getElementById("thankYouMsg").style.display = "block";
-  return false; // prevent page refresh
-
 }
-
-function clearForm() {
-  document.getElementById("contactForm").reset();
-
-  // Show Thank You message
-  document.getElementById("thankYouMsg").style.display = "block";
-}
-
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
