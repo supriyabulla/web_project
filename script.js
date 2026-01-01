@@ -37,6 +37,12 @@ function handleContactForm() {
   alert("Message saved successfully!");
 }
 
+function clearForm() {
+  document.getElementById("contactForm").reset();
+  document.getElementById("thankYouMsg").style.display = "block";
+}
+
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function addToCart(name, price, qtyId) {

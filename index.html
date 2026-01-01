@@ -69,13 +69,18 @@
 
 <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <form onsubmit="return handleContactForm()">
+    <form id="contactForm" onsubmit="return handleContactForm()">
       <input type="text" id="name" placeholder="Your Name" required>
       <input type="email" id="email" placeholder="Your Email" required>
       <input type="tel" id="phone" placeholder="Phone Number">
       <textarea id="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
+      <button type="button" onclick="clearForm()">Clear</button>
     </form>
+<p id="thankYouMsg" style="display:none; color:green; font-weight:bold;">
+Thank you! 
+</p>
+
 </section>
 
 <footer>
