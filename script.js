@@ -42,7 +42,6 @@ function clearForm() {
   document.getElementById("thankYouMsg").style.display = "block";
 }
 
-
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function addToCart(name, price, qtyId) {
